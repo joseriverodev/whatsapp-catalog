@@ -3,7 +3,7 @@
 A catalog app where customers browse products, build a cart, and the 
 order lands as a structured WhatsApp message to the store owner. No 
 payment gateway, no monthly fees: the sale closes in the chat, which 
-is where small businesses around here actually sell.
+is where small businesses here actually sell.
 
 This is the base version of a system I deployed twice for real stores: 
 a jewelry shop for a paying client, and a general store my family runs 
@@ -11,20 +11,20 @@ daily. Both are live. This repo is the clean version with example data.
 
 ## What it does
 
-- Storefront with categories, accent-insensitive search, offers, and 
-  a cart that compiles into a WhatsApp order message with per-item 
-  links and totals
-- Admin panel: products with gallery and variants (each variant has 
-  its own price and stock), categories, editable banners, discount 
-  coupons, store config
+- Storefront with categories, accent-insensitive search (matches product 
+  name, description and category), offers, and a cart that compiles into 
+  a WhatsApp order message with per-item links and totals
+- Admin panel: products with gallery and variants (each variant has its 
+  own price and stock), categories, editable banners, discount coupons, 
+  store config
 - Stock designed for WhatsApp sales: nothing decrements automatically 
-  (a fake order would lock stock for nothing), the owner updates it 
-  with one click and items pause at zero
+  (a fake order would lock stock for nothing), the owner updates it with 
+  one click and items pause at zero
 
 ## Stack
 
-Next.js (App Router), TypeScript, Tailwind CSS + shadcn/ui, Prisma 
-with PostgreSQL (Neon), Cloudinary for images, Vercel for hosting.
+Next.js (App Router), TypeScript, Tailwind CSS + shadcn/ui, Prisma with 
+PostgreSQL (Neon), Cloudinary for images, Vercel for hosting.
 
 ## The auth fix, and why this repo exists
 
@@ -49,14 +49,14 @@ This version fixes it:
 - TypeScript build errors are still ignored in next.config.ts, a 
   shortcut from the original delivery. Removing that and fixing the 
   types is on the roadmap
-- The storefront is one large page component; splitting it into 
-  hooks and components is the next refactor
-- Creating a product with only an external image URL doesn't save 
-  the image (editing does). Needs fixing
+- The storefront is one large page component; splitting it into hooks 
+  and components is the next refactor
+- Creating a product with only an external image URL doesn't save the 
+  image (editing does). Needs fixing
 - Admin-only reads (the full product list) are still open endpoints. 
   Only writes are gated today
-- heroTitle and heroImage in SiteConfig are unused leftovers from 
-  the first version
+- heroTitle and heroImage in SiteConfig are unused leftovers from the 
+  first version
 
 ## Run it
 
