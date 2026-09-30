@@ -64,9 +64,9 @@ model SiteConfig {
   phoneCall    String?
   instagram    String?
   tiktok       String?
-  heroTitle    String   @default("Welcome to our store")
+  heroTitle    String  @default("Welcome to our store")
   heroSubtitle String  @default("Browse our catalog and order via WhatsApp")
-  heroImage    String   @default("/hero-banner.png")
+  heroImage    String  @default("/hero-banner.png")
   updatedAt    DateTime @updatedAt
 }
 
