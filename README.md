@@ -8,6 +8,7 @@ is where small businesses here actually sell.
 This is the base version of a system I deployed twice for real stores: 
 a jewelry shop for a paying client, and a general store my family runs 
 daily. Both are live. This repo is the clean version with example data.
+Live demo: https://whatsapp-catalog-pied.vercel.app
 
 ## What it does
 
